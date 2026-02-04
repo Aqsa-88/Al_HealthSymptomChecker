@@ -1,0 +1,44 @@
+
+# Miscellaneous
+*.class
+*.log
+*.lock
+*.pyc
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+.pub-cache/
+.pub/
+
+# Android studio
+.idea/
+.gradle/
+*.iml
+local.properties
+
+# Visual Studio Code
+.vscode/
+
+# C# / .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+packages/
+_ReSharper.Caches/
+.vs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv/
