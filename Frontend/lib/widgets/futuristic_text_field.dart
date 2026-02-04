@@ -6,6 +6,7 @@ class FuturisticTextField extends StatelessWidget {
   final IconData icon;
   final bool isPassword;
   final TextInputType keyboardType;
+  final Widget? suffixIcon;
 
   const FuturisticTextField({
     super.key,
@@ -14,6 +15,7 @@ class FuturisticTextField extends StatelessWidget {
     required this.icon,
     this.isPassword = false,
     this.keyboardType = TextInputType.text,
+    this.suffixIcon,
   });
 
   @override
@@ -35,8 +37,18 @@ class FuturisticTextField extends StatelessWidget {
           labelStyle: TextStyle(color: Colors.white.withOpacity(0.6)),
           prefixIcon: Icon(icon, color: Colors.white.withOpacity(0.5)),
           border: InputBorder.none,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-          suffixIcon: isPassword ? Icon(Icons.lock_outline, color: Colors.white.withOpacity(0.3)) : null,
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 15,
+          ),
+          suffixIcon:
+              suffixIcon ??
+              (isPassword
+                  ? Icon(
+                      Icons.lock_outline,
+                      color: Colors.white.withOpacity(0.3),
+                    )
+                  : null),
         ),
       ),
     );
